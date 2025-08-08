@@ -484,12 +484,13 @@ class MacroEndpoint(BaseEndpoint):
                 path += '/destroy_many.json'
                 params['ids'] = ",".join(map(str, value))
             elif key == 'cursor_pagination' and value:
-                if value is True:
+                pass
+                '''if value is True:
                     params['page[size]'] = 100
                 else:
                     params['page[size]'] = value
             else:
-                params[key] = value
+                params[key] = value'''
 
         if sort_order:
             params['sort_order'] = sort_order
